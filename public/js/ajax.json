@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Marketing in a Digital World",
+    "link" : "https://www.coursera.org/learn/marketing-digital",
+    "text" : "This course will examine how digital tools, such as the Internet, smartphones, and 3D printing, are revolutionizing the world of marketing by shifting the balance of power from firms to consumers.",
+    "image" : "../images/digitalmarketer_digitalworld.jpeg"
+  },
+  {
+    "name": "Digital Branding and Engagement",
+    "link" : "https://www.coursera.org/learn/marketing-digital",
+    "text" : "Learn how to increase brand engagement through the creation and distribution of content using an owned digital channel approach.",
+    "image" : "../images/digitalmarketer_digitalworld.jpeg"
+  },
+  {
+    "name": "Introduction to Search Engine Optimization",
+    "link" : "https://www.coursera.org/learn/marketing-digital",
+    "text" : "You will be introduced to the foundational elements of how search engines work, how the SEO landscape has changed and what you can expect in the future.",
+    "image" : "../images/digitalmarketer_digitalworld.jpeg"
+  },
+  {
+    "name": "Marketing Fundamentals: Who Is Your Customer?",
+    "link" : "https://www.coursera.org/learn/marketing-digital",
+    "text" : "Learn key marketing concepts to implement customer acquisition strategies to find the right customers and grow your business.",
+    "image" : "../images/digitalmarketer_digitalworld.jpeg"
+  }
+]

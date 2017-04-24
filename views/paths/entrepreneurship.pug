@@ -1,0 +1,187 @@
+extends ../layout
+
+block content
+  .container-fluid-wider1
+    .col-sm-3.col-xs-6
+      h3 Hi #{user.fname}, 
+         br
+         | Please find your personal learning path in #{user.profile.career}
+         
+      p Using our machine learning algorithm we have defined a personal learning path adapted to your needs depedning on the information you have provided.  
+          
+
+  .container
+   br
+   .col-sm-4.col-xs-8.col-sm-offset-0.col-xs-offset-2
+    .box
+     h3#roadmap-titre 	 Skills you will learn:
+     p  	 Business , Startups, Entrepreneurship, HTML and CSS
+     
+   .col-sm-4.col-xs-8.col-sm-offset-0.col-xs-offset-2
+    .box
+     h3#roadmap-titre 	 Job outcomes:
+     p  	 Entrepreneur
+   .col-sm-4.col-xs-8.col-sm-offset-0.col-xs-offset-2
+    .box
+     h3#roadmap-titre 	 Learning time:
+     
+     //70
+     p 
+      if user.profile.hours == "five"
+        p 4 Months
+      else if user.profile.hours == "ten"
+        p 2 Months
+      else if user.profile.hours == "twenty"
+        p 1 Months
+      else 
+        p 2 Weeks
+
+  br
+  br
+  br
+  .container-fluid
+   .left
+    .row
+     .col-md-1.col-sm-1.col-xs-1.box4
+        img(src='../images/icon_star.png', style='width:32px;height:32px;')
+     .col-md-2.col-sm-2.hidden-xs.box1
+       img(src='https://rubygarage.org/uploads/article/main_image/74/how-to-build-a-startup.jpg', style="max-width:173px;max-height:106px;")
+     .col-md-6.col-sm-8.col-xs-10.box5
+       a(target='_blank', href='https://www.udacity.com/course/how-to-build-a-startup--ep245')
+         h3#roadmap-titre  How to Build a Startup
+       p In an introduction to the basics of the famous Customer Development Process, Steve Blank provides insight into the key steps needed to build a successful startup.
+       
+       
+    
+    br
+    br  
+    
+    .container-fluid
+       .left
+        .row
+         .col-md-1.col-sm-1.col-xs-1.box4
+            img(src='../images/icon_star.png', style='width:32px;height:32px;')
+         .col-md-2.col-sm-2.hidden-xs.box1
+           img(src='http://contact-centres.com/wp-content/uploads/2017/01/analytics.image_.jan_.2017.1.jpg', style="max-width:173px;max-height:106px;")
+         .col-md-6.col-sm-8.col-xs-10.box5
+           a(target='_blank', href='https://www.coursera.org/learn/marketing-digital')
+             h3#roadmap-titre  Marketing in a Digital World
+             
+             
+           p This course examines how digital tools, such as the Internet, smartphones, and 3D printing, are revolutionizing the world of marketing by shifting the balance of power from firms to consumers.
+           
+           
+        
+        br
+        br
+      
+
+       
+    if user.profile.leave == "long"
+         .container-fluid
+             .left
+              .row
+               .col-md-1.col-sm-1.col-xs-1.box4
+                  img(src='../images/icon_coffee.png', style='width:32px;height:32px;')
+               .col-sm-2.col-xs-4
+               .col-md-5.col-sm-8.col-xs-10.box5
+                 a(target='_blank', href='https://gsuite.google.com/learning-center/')
+                   h3#roadmap-titre 	 How to use Google Suite?
+                 p  Explore ideas for working together and running your business, shared by customers from all over the world.
+               .col-md-2.col-sm-2.hidden-xs.box1.hidden-sm
+                         img(src='http://images.telegiz.com/data/images/full/7400/google-has-rebranded-its-apps-for-work-as-g-suite.png', style="max-width:150px;max-height:106px;")
+               .col-sm-1.col-md-offset-1.hidden-xs.hidden-sm
+         br
+         br
+
+
+
+   
+  .container-fluid
+    .left
+     .row
+      .col-md-1.col-sm-1.col-xs-1.box4
+         img(src='../images/icon_star.png', style='width:32px;height:32px;')
+      .col-md-2.col-sm-2.hidden-xs.box1
+
+        img(src='https://cdn-images-1.medium.com/max/2000/1*l4xICbIIYlz1OTymWCoUTw.jpeg', style="max-width:150px;max-height:106px;")
+      .col-md-6.col-sm-8.col-xs-10.box5
+        a(target='_blank', href='https://www.coursera.org/learn/duke-programming-web')
+          h3#roadmap-titre 	 Programming Foundations with JavaScript, HTML and CSS
+        p Learn foundational programming concepts (e.g., functions, for loops, conditional statements) and how to solve problems like a programmer. In addition, learn basic web development as you build web pages using HTML, CSS, JavaScript 
+      .col-sm-2.col-md-offset-1.hidden-xs.hidden-sm
+  br
+  br
+  
+  .container-fluid
+    .left
+     .row
+      .col-md-1.col-sm-1.col-xs-1.box4
+         img(src='../images/icon_star.png', style='width:32px;height:32px;')
+      .col-md-2.col-sm-2.hidden-xs.box1
+
+        img(src='https://www.edx.org/sites/default/files/course/image/promoted/iimbx_accountingfordecisionmaking_378x225.jpg', style="max-width:150px;max-height:106px;")
+      .col-md-6.col-sm-8.col-xs-10.box5
+        a(target='_blank', href='https://www.edx.org/course/accounting-decision-making-iimbx-ac103x-0')
+          h3#roadmap-titre 	 Accounting for Decision-Making
+        p Learn how to read and interpret financial statements and manage costs to take informed business decisions.
+      .col-sm-2.col-md-offset-1.hidden-xs.hidden-sm
+  br
+  br
+  if user.profile.development == "Yes"
+    .container-fluid
+        .left
+         .row
+          .col-md-1.col-sm-1.col-xs-1.box4
+             img(src='../images/icon_coffee.png', style='width:32px;height:32px;')
+          .col-sm-2.col-xs-4
+          .col-md-5.col-sm-8.col-xs-10.box5
+            a(target='_blank', href='https://www.edx.org/course/resume-networking-interview-skills-fullbridgex-career5x')
+              h3#roadmap-titre 	 Resume, Networking, and Interview Skills
+            p  Get the job you want with compelling resume writing and focused interview preparation.
+          .col-md-2.col-sm-2.hidden-xs.box1.hidden-sm
+                    img(src='http://gethiredfast.com/wp-content/uploads/2012/10/bigstock-Business-social-media-network-7907818.jpg', style="max-width:150px;max-height:106px;")
+          .col-sm-1.col-md-offset-1.hidden-xs.hidden-sm
+    br
+    br
+
+  .container-fluid
+    .left
+     .row
+      .col-md-1.col-sm-1.col-xs-1.box4
+         img(src='../images/icon_star.png', style='width:32px;height:32px;')
+      .col-md-2.col-sm-2.hidden-xs.box1
+
+        img(src="https://www.edx.org/sites/default/files/course/image/promoted/iimbx_ep101x_courseimage_378x225.jpg" style="width:150px;height:106px;")
+      .col-md-6.col-sm-8.col-xs-10.box5
+        a(target='_blank', href="https://www.edx.org/course/entrepreneurship-do-venture-iimbx-ep101x-0")
+          h3#roadmap-titre 	 Entrepreneurship: DO Your Venture
+        p Learn a systematic, scientific and iterative process for identifying, evaluating and testing entrepreneurial opportunities.
+      .col-sm-2.col-md-offset-1.hidden-xs.hidden-sm
+
+  br
+  br
+  .container-fluid
+      .left
+       .row
+        .col-md-1.col-sm-1.col-xs-1.box4
+           img(src='../images/icon_star.png', style='width:32px;height:32px;')
+        .col-md-2.col-sm-2.hidden-xs.box1
+
+          img(src="https://ww2.glance.net/wp-content/uploads/2015/01/glance-for-finance.jpg" style="width:150px;height:106px;")
+        .col-md-6.col-sm-8.col-xs-10.box5
+          a(target='_blank', href="https://fr.coursera.org/learn/wharton-finance")
+            h3#roadmap-titre 	 Introduction to Corporate Finance
+          p This course provides a brief introduction to the fundamentals of finance, emphasizing their application to a wide variety of real-world situations spanning personal finance, corporate decision-making, and financial intermediation. 
+        .col-sm-2.col-md-offset-1.hidden-xs.hidden-sm
+
+  br
+  br
+    
+  .container
+   #centre
+     h4 Once you have finished your learning path, we will help you land your dream job.
+     p 
+      a.btn.btn-default(href='mailto:support@acuityformoms.com', role='button') Land your dream job »  
+
+  hr

@@ -1,0 +1,173 @@
+extends ../layout
+
+block content
+  .container-fluid-wider1
+    .col-sm-3.col-xs-6
+      h3 Hi #{user.fname}, 
+         br
+         | Please find your personal learning path in #{user.profile.career}
+         
+      p Using our machine learning algorithm we have defined a personal learning path adapted to your needs depedning on the information you have provided.  
+          
+
+  .container
+   br
+   .col-sm-4.col-xs-8.col-sm-offset-0.col-xs-offset-2
+    .box
+     h3#roadmap-titre 	 Skills you will learn:
+     p  	 Marketing, Google tools, Branding
+     
+   .col-sm-4.col-xs-8.col-sm-offset-0.col-xs-offset-2
+    .box
+     h3#roadmap-titre 	 Job outcomes:
+     p  	 Digital Marketing
+   .col-sm-4.col-xs-8.col-sm-offset-0.col-xs-offset-2
+    .box
+     h3#roadmap-titre 	 Learning time:
+     
+     //70
+     p 
+      if user.profile.hours == "five"
+        p 6 Months
+      else if user.profile.hours == "ten"
+        p 3 Months
+      else if user.profile.hours == "twenty"
+        p 1.5 Months
+      else 
+        p 4 Weeks
+
+  br
+  br
+  br
+  .container-fluid
+   .left
+    .row
+     .col-md-1.col-sm-1.col-xs-1.box4
+        img(src='../images/icon_star.png', style='width:32px;height:32px;')
+     .col-md-2.col-sm-2.hidden-xs.box1
+       img(src='http://contact-centres.com/wp-content/uploads/2017/01/analytics.image_.jan_.2017.1.jpg', style="max-width:173px;max-height:106px;")
+     .col-md-6.col-sm-8.col-xs-10.box5
+       a(target='_blank', href='https://www.coursera.org/learn/marketing-digital')
+         h3#roadmap-titre  Marketing in a Digital World
+       p This course examines how digital tools, such as the Internet, smartphones, and 3D printing, are revolutionizing the world of marketing by shifting the balance of power from firms to consumers.
+       
+       
+    
+    br
+    br  
+    
+    .container-fluid
+       .left
+        .row
+         .col-md-1.col-sm-1.col-xs-1.box4
+            img(src='../images/icon_star.png', style='width:32px;height:32px;')
+         .col-md-2.col-sm-2.hidden-xs.box1
+           img(src='https://www.edx.org/sites/default/files/course/image/promoted/mkt1x-course_image-378x225_0.jpg', style="max-width:173px;max-height:106px;")
+         .col-md-6.col-sm-8.col-xs-10.box5
+           a(target='_blank', href='https://www.edx.org/course/digital-branding-engagement-curtinx-mkt1x-3')
+             h3#roadmap-titre  Digital Branding and Engagement
+             
+             
+           p Learn how to increase brand engagement through the creation and distribution of content using an owned digital channel approach.
+           
+           
+        
+        br
+        br
+      
+
+       
+    if user.profile.leave == "long"
+         .container-fluid
+             .left
+              .row
+               .col-md-1.col-sm-1.col-xs-1.box4
+                  img(src='../images/icon_coffee.png', style='width:32px;height:32px;')
+               .col-sm-2.col-xs-4
+               .col-md-5.col-sm-8.col-xs-10.box5
+                 a(target='_blank', href='https://gsuite.google.com/learning-center/')
+                   h3#roadmap-titre 	 How to use Google Suite?
+                 p  Explore ideas for working together and running your business, shared by customers from all over the world.
+               .col-md-2.col-sm-2.hidden-xs.box1.hidden-sm
+                         img(src='http://images.telegiz.com/data/images/full/7400/google-has-rebranded-its-apps-for-work-as-g-suite.png', style="max-width:150px;max-height:106px;")
+               .col-sm-1.col-md-offset-1.hidden-xs.hidden-sm
+         br
+         br
+
+
+
+   
+  .container-fluid
+    .left
+     .row
+      .col-md-1.col-sm-1.col-xs-1.box4
+         img(src='../images/icon_star.png', style='width:32px;height:32px;')
+      .col-md-2.col-sm-2.hidden-xs.box1
+
+        img(src='https://lh5.googleusercontent.com/ycxT6fVkDVQMChQPK01TE_3qtG9GZdvF0AdBmSEVq-MjtVBPaqDzPQAwIpJmw_6EFgFO8AII1l63gnuLMvd4Bth44nhvr00oHBF9_e6QLVD_fsxREEjKwtiMJ7hXYZwPHHT9Igc', style="max-width:150px;max-height:106px;")
+      .col-md-6.col-sm-8.col-xs-10.box5
+        a(target='_blank', href='https://www.google.com/onlinechallenge/dmc/index.html')
+          h3#roadmap-titre 	 Google online marketing
+        p  The Digital Marketing Course is a Google initiative designed to educate people in the area of Digital Marketing. 
+      .col-sm-2.col-md-offset-1.hidden-xs.hidden-sm
+  br
+  br
+  
+  .container-fluid
+    .left
+     .row
+      .col-md-1.col-sm-1.col-xs-1.box4
+         img(src='../images/icon_star.png', style='width:32px;height:32px;')
+      .col-md-2.col-sm-2.hidden-xs.box1
+
+        img(src='http://unspunmarketing.com/wp-content/uploads/2015/06/b9-digital-marketing-chart.png', style="max-width:150px;max-height:106px;")
+      .col-md-6.col-sm-8.col-xs-10.box5
+        a(target='_blank', href='https://fr.coursera.org/learn/marketing-channels')
+          h3#roadmap-titre 	 Digital Marketing Channels: The Landscape
+        p Learn the role of digital channels in an integrated marketing campaign and why you need a digital strategy. Interact with the content and hear from industry experts invited to join the course.
+      .col-sm-2.col-md-offset-1.hidden-xs.hidden-sm
+  br
+  br
+  if user.profile.development == "Yes"
+    .container-fluid
+        .left
+         .row
+          .col-md-1.col-sm-1.col-xs-1.box4
+             img(src='../images/icon_coffee.png', style='width:32px;height:32px;')
+          .col-sm-2.col-xs-4
+          .col-md-5.col-sm-8.col-xs-10.box5
+            a(target='_blank', href='https://www.edx.org/course/resume-networking-interview-skills-fullbridgex-career5x')
+              h3#roadmap-titre 	 Resume, Networking, and Interview Skills
+            p  Get the job you want with compelling resume writing and focused interview preparation.
+          .col-md-2.col-sm-2.hidden-xs.box1.hidden-sm
+                    img(src='http://gethiredfast.com/wp-content/uploads/2012/10/bigstock-Business-social-media-network-7907818.jpg', style="max-width:150px;max-height:106px;")
+          .col-sm-1.col-md-offset-1.hidden-xs.hidden-sm
+    br
+    br
+
+  .container-fluid
+    .left
+     .row
+      .col-md-1.col-sm-1.col-xs-1.box4
+         img(src='../images/icon_star.png', style='width:32px;height:32px;')
+      .col-md-2.col-sm-2.hidden-xs.box1
+
+        img(src="https://www.edx.org/sites/default/files/styles/course_video_banner/public/course/image/featured-card/mkt4x_courseabout_318x210.jpg?itok=wI0yL4eL" style="width:150px;height:106px;")
+      .col-md-6.col-sm-8.col-xs-10.box5
+        a(target='_blank', href="https://www.edx.org/course/strategic-brand-management-curtinx-mkt4x")
+          h3#roadmap-titre 	 Strategic Brand Management
+        p Examine product/brand management decisions and investigate the strategies and tactics to build, measure and manage brand equity.
+      .col-sm-2.col-md-offset-1.hidden-xs.hidden-sm
+
+
+
+  br
+  br
+    
+  .container
+   #centre
+     h4 Once you have finished your learning path, we will help you land your dream job.
+     p 
+      a.btn.btn-default(href='mailto:support@acuityformoms.com', role='button') Land your dream job »  
+
+  hr

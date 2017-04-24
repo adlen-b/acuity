@@ -1,0 +1,117 @@
+extends layout
+
+block content
+  .container-fluid-wider
+   #cache
+     #centre
+      p.lead Empowering mothers to re-enter the workforce using the best online resources.
+      p 
+       a.btn.btn-default(href='/pages/form', role='button') Begin your journey »
+       
+
+  .container
+   .row
+    br
+    br
+    .col-md-3.col-xs-5
+     img(src='images/logo_udacity.svg', style='width:220px;height:40px;')
+    .col-md-3.col-xs-5.hidden-sm.hidden-xs
+     img(src='images/logo_edx.png', style='width:90px;height:30px;')
+    .col-md-3.col-xs-5
+     img(src='images/logo_udemy.png', style='width:170px;height:40px;')
+    .col-md-3.col-xs-5.hidden-sm.hidden-xs
+     img(src='images/logo_coursera.png', style='width:170px;height:40px;')
+   .row
+    .col-sm-4.col-xs-6
+     img(src='images/logo_mit.png', style='width:180px;height:80px;')
+    .col-sm-4.col-xs-6
+     img(src='images/logo_berkeley.png', style='width:180px;height:80px;')
+    .col-sm-4.hidden-xs
+     img(src='images/logo_harvard.png', style='width:180px;height:80px;')
+   hr
+
+   .row
+    br
+    .col-md-3.col-xs-6
+     br
+     img(src='images/homepage_aggregate.png', style='width:135px;height:135px;')
+     h4
+      | Find the best online courses
+    .col-md-3.col-xs-6
+     br
+     img(src='images/homepage_customized.png', style='width:135px;height:135px;')
+     h4 Define your personal learning path
+    .col-md-3.col-xs-6
+     br
+     img(src='images/homepage_virtual.png', style='width:135px;height:135px;')
+     h4 Join our community
+    .col-md-3.col-xs-6
+     br
+     img(src='images/homepage_additional.png', style='width:135px;height:135px;')
+     h4 Land your dream job
+   hr
+
+   .row
+    h3  Online Classes
+    br
+    .col-sm-4
+      img(src='images/homepage_onlineclasses.png', style='width:200px;height:200px;')
+    .col-sm-8
+     br
+     br
+     br
+     p.infotext
+       | Through our algorithm we find and filter the most relevant classes that match
+       | your learning interests. We want to make sure that these classes are informative
+       | and useful in order to gain the skills you want.
+           
+   .row
+    h3  Land your dream job 
+    br
+    
+    .col-sm-8
+     br
+     br
+     br
+     p.infotext  
+          | We have partnered with companies to define our learning paths depending on the 
+          | industry needs. Join us to benefit from our career advice and to apply for jobs  
+          | tailored to mothers.
+    .col-sm-4
+      img(src='https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQDY3nj4ohEzbvclTdSWJ_gE4EeUdqc_KZg3nSxPT-jQb4Tmi3N', style='width:300px;height:200px;')
+
+
+
+   .row
+    br
+    br
+    h3  The community
+    .cache4
+     .col-sm-8
+      h4.infotitre2  Business Network
+      br
+      br
+      p.infotext
+        | We want to help you find the right job by providing access to our business network.
+        | Connect, meet, and network with industry professionals and mentors.
+     .col-sm-4
+        br
+        img(src='images/homepage_businessnetwork.png', style='width: 100%; height:250px; max-width:350px;')
+     .col-sm-4.hidden-xs
+        br
+        img(src='images/homepage_photo_supportgroup.png', style='width: 100%;height:250px; max-width:350px;')
+     .col-sm-8
+        br
+        h4.infotitre2  Support Group
+        .ligne2
+        br
+        br
+        p.infotext
+          | Balancing being a mom & a student is not easy!
+          | You will be able to study with nearby moms with whom to connect, study and share.
+          | Have the opportunity to meet other moms and help each other.
+     br
+     br
+     p
+      a.btn.btn-default(href='/pages/form', role='button') Join our community »
+   hr

@@ -1,0 +1,173 @@
+extends ../layout
+
+block content
+  .page-header
+   .container
+    h3 Help us define your learning roadmap
+
+  form.form-horizontal(action='/pages/form', method='POST')
+    input(type='hidden', name='_csrf', value=_csrf)
+    
+    .form-group
+       label.col-sm-3.control-label What is your highest education level?
+       .col-sm-9
+         label.radio.col-sm-4
+           input(type='radio', checked=user.profile.highest_education=='High School', name='highest_education', value='High School', data-toggle='radio')
+           span High School or less 
+         label.radio.col-sm-4
+           input(type='radio', checked=user.profile.highest_education=='Bachelor degree', name='highest_education', value='Bachelor degree', data-toggle='radio')
+           span Bachelor's degree
+         label.radio.col-sm-4
+            input(type='radio', checked=user.profile.highest_education=='Graduate degree', name='highest_education', value='Graduate degree', data-toggle='radio')
+            span Graduate degree
+    
+      
+    .form-group
+       label.col-sm-3.control-label What subject did you study?
+       .col-sm-9
+         label.radio.col-sm-3
+           input(type='radio', checked=user.profile.subject=='Arts', name='subject', value='Arts', data-toggle='radio')
+           span Arts and Humanities
+         label.radio.col-sm-3
+           input(type='radio', checked=user.profile.subject=='Business', name='subject', value='Business', data-toggle='radio')
+           span Business and Management
+         label.radio.col-sm-3
+            input(type='radio', checked=user.profile.subject=='Computer', name='subject', value='Computer', data-toggle='radio')
+            span Computer Science and Data Science
+         label.radio.col-sm-3
+            input(type='radio', checked=user.profile.subject=='Digital', name='subject', value='Digital', data-toggle='radio')
+            span Digital Marketing and Web Design
+         label.radio.col-sm-3
+            input(type='radio', checked=user.profile.subject=='Education', name='subject', value='Education', data-toggle='radio')
+            span Education and Teacher Training
+         label.radio.col-sm-3
+            input(type='radio', checked=user.profile.subject=='Engineering', name='subject', value='Engineering', data-toggle='radio')
+            span Engineering and Physical Science Environmental Studies 
+         label.radio.col-sm-3
+            input(type='radio', checked=user.profile.subject=='Languages', name='subject', value='Languages', data-toggle='radio')
+            span Languages
+         label.radio.col-sm-3
+            input(type='radio', checked=user.profile.subject=='Health', name='subject', value='Health', data-toggle='radio')
+            span Health and Safety
+         label.radio.col-sm-3
+            input(type='radio', checked=user.profile.subject=='Social', name='subject', value='Social', data-toggle='radio')
+            span Social Sciences
+          
+      
+    .form-group
+       label.col-sm-3.control-label How many years of experience do you have?
+       .col-sm-9
+         label.radio.col-sm-3
+           input(type='radio', checked=user.profile.experience=='0', name='experience', value='0', data-toggle='radio')
+           span 0 - 2 years  
+         label.radio.col-sm-3
+           input(type='radio', checked=user.profile.experience=='2', name='experience', value='2', data-toggle='radio')
+           span 2 - 5 years
+         label.radio.col-sm-3
+            input(type='radio', checked=user.profile.experience=='5', name='experience', value='5', data-toggle='radio')
+            span 5 - 10 years
+         label.radio.col-sm-3
+            input(type='radio', checked=user.profile.experience=='10', name='experience', value='10', data-toggle='radio')
+            span + 10 years
+  
+    
+    .form-group
+       label.col-sm-3.control-label When did you leave the workforce?
+       .col-sm-9
+         label.radio.col-sm-3
+           input(type='radio', checked=user.profile.leave=='never', name='leave', value='never', data-toggle='radio')
+           span 0 - 2 years  
+         label.radio.col-sm-3
+           input(type='radio', checked=user.profile.leave=='never', name='leave', value='never', data-toggle='radio')
+           span 2 - 5 years
+         label.radio.col-sm-3
+            input(type='radio', checked=user.profile.leave=='long', name='leave', value='long', data-toggle='radio')
+            span +5 years
+    br
+    br  
+      
+      
+    .form-group
+       label.col-sm-3.control-label What field would you like to consider for your career?
+       .col-sm-9
+         label.radio.col-sm-3
+           input(type='radio', checked=user.profile.career=='web development', name='career', value='web development', data-toggle='radio')
+           span Web Development
+         label.radio.col-sm-3
+           input(type='radio', checked=user.profile.career=='software development', name='career', value='software development', data-toggle='radio')
+           span Software Development
+         label.radio.col-sm-3
+           input(type='radio', checked=user.profile.career=='web design', name='career', value='web design', data-toggle='radio')
+           span Web Design
+         label.radio.col-sm-3
+            input(type='radio', checked=user.profile.career=='digital marketing', name='career', value='digital marketing', data-toggle='radio')
+            span Digital Marketing
+         label.radio.col-sm-3
+            input(type='radio', checked=user.profile.career=='business foundation', name='career', value='business foundation', data-toggle='radio')
+            span Business Foundation
+         label.radio.col-sm-3
+            input(type='radio', checked=user.profile.career=='entrepreneurship', name='career', value='entrepreneurship', data-toggle='radio')
+            span Entrepreneurship
+         label.radio.col-sm-3
+            input(type='radio', checked=user.profile.career=='project management', name='career', value='project management', data-toggle='radio')
+            span Project Management
+        
+    
+      
+      
+    .form-group
+       label.col-sm-3.control-label What kind of job are you looking for?
+       .col-sm-9
+         label.radio.col-sm-3
+           input(type='radio', checked=user.profile.job=='Full', name='job', value='Full', data-toggle='radio')
+           span Full Time 
+         label.radio.col-sm-3
+           input(type='radio', checked=user.profile.job=='Part', name='job', value='Part', data-toggle='radio')
+           span Part Time
+         label.radio.col-sm-3
+            input(type='radio', checked=user.profile.job=='Internship', name='job', value='Internship', data-toggle='radio')
+            span Internship
+         label.radio.col-sm-3
+             input(type='radio', checked=user.profile.job=='Free', name='job', value='Free', data-toggle='radio')
+             span Free lance
+         
+    
+    .form-group
+       label.col-sm-3.control-label Do you need help in career development?
+       .col-sm-9
+         label.radio.col-sm-6
+           input(type='radio', checked=user.profile.development=='Yes', name='development', value='Yes', data-toggle='radio')
+           span Yes 
+         label.radio.col-sm-6
+           input(type='radio', checked=user.profile.development=='No', name='development', value='No', data-toggle='radio')
+           span No
+         l
+      
+      
+    .form-group
+         label.col-sm-3.control-label How many hours can you spend to learn every week?
+         .col-sm-9
+           label.radio.col-sm-3
+             input(type='radio', checked=user.profile.hours=='five', name='hours', value='five', data-toggle='radio')
+             span 0-5 hours
+           label.radio.col-sm-3
+             input(type='radio', checked=user.profile.hours=='ten', name='hours', value='ten', data-toggle='radio')
+             span 5-10 hours 
+           label.radio.col-sm-3
+             input(type='radio', checked=user.profile.hours=='twenty', name='hours', value='twenty', data-toggle='radio')
+             span 10-20 hours
+           label.radio.col-sm-3
+              input(type='radio', checked=user.profile.hours=='more', name='hours', value='more', data-toggle='radio')
+              span 20+ hours
+    br
+              
+    
+    .form-group
+      .col-sm-offset-3.col-sm-4
+        button.btn.btn.btn-primary(type='submit')
+          i.fa.fa-pencil
+          | Update Background
+          
+      
+
+  hr

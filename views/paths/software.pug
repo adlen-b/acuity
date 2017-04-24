@@ -1,0 +1,186 @@
+extends ../layout
+
+block content
+  .container-fluid-wider1
+    .col-sm-3.col-xs-6
+      h3 Hi #{user.fname}, 
+         br
+         | Please find your personal learning path in #{user.profile.career}
+         
+      p Using our machine learning algorithm we have defined a personal learning path adapted to your needs depedning on the information you have provided.  
+          
+
+  .container
+   br
+   .col-sm-4.col-xs-8.col-sm-offset-0.col-xs-offset-2
+    .box
+     h3#roadmap-titre 	 Skills you will learn:
+     p  	 HTML, CSS, Java, Object Oriented Design
+     
+   .col-sm-4.col-xs-8.col-sm-offset-0.col-xs-offset-2
+    .box
+     h3#roadmap-titre 	 Job outcomes:
+     p  	 Software Development
+   .col-sm-4.col-xs-8.col-sm-offset-0.col-xs-offset-2
+    .box
+     h3#roadmap-titre 	 Learning time:
+     
+     //70
+     p 
+      if user.profile.hours == "five"
+        p 10 Months
+      else if user.profile.hours == "ten"
+        p 5 Months
+      else if user.profile.hours == "twenty"
+        p 2.5 Months
+      else 
+        p 2 Months
+
+  br
+  br
+  br
+  .container-fluid
+   .left
+    .row
+     .col-md-1.col-sm-1.col-xs-1.box4
+        img(src='../images/icon_star.png', style='width:32px;height:32px;')
+     .col-md-2.col-sm-2.hidden-xs.box1
+       img(src='https://cdn-images-1.medium.com/max/2000/1*l4xICbIIYlz1OTymWCoUTw.jpeg', style="max-width:173px;max-height:106px;")
+     .col-md-6.col-sm-8.col-xs-10.box5
+       a(target='_blank', href='https://www.coursera.org/learn/duke-programming-web')
+         h3#roadmap-titre  Programming Foundations with JavaScript, HTML and CSS
+       p Learn foundational programming concepts (e.g., functions, for loops, conditional statements) and how to solve problems like a programmer. In addition, learn basic web development as you build web pages using HTML, CSS, JavaScript
+       
+       
+    
+    br
+    br  
+    
+    .container-fluid
+       .left
+        .row
+         .col-md-1.col-sm-1.col-xs-1.box4
+            img(src='../images/icon_star.png', style='width:32px;height:32px;')
+         .col-md-2.col-sm-2.hidden-xs.box1
+           img(src='https://www.edx.org/sites/default/files/styles/course_video_banner/public/course/image/featured-card/htc1_image-v4_318x210.jpg?itok=DnxK13XD', style="max-width:173px;max-height:106px;")
+         .col-md-6.col-sm-8.col-xs-10.box5
+           a(target='_blank', href='https://www.edx.org/course/how-code-simple-data-ubcx-htc1x')
+             h3#roadmap-titre  How to Code: Simple Data
+             
+             
+           p Learn systematic program design - how to write programs that tell a clear story about what they do, are well-tested, and easy to improve.
+           
+           
+        
+        br
+        br
+      
+
+       
+    if user.profile.leave == "long"
+         .container-fluid
+             .left
+              .row
+               .col-md-1.col-sm-1.col-xs-1.box4
+                  img(src='../images/icon_coffee.png', style='width:32px;height:32px;')
+               .col-sm-2.col-xs-4
+               .col-md-5.col-sm-8.col-xs-10.box5
+                 a(target='_blank', href='https://gsuite.google.com/learning-center/')
+                   h3#roadmap-titre 	 How to use Google Suite?
+                 p  Explore ideas for working together and running your business, shared by customers from all over the world.
+               .col-md-2.col-sm-2.hidden-xs.box1.hidden-sm
+                         img(src='http://images.telegiz.com/data/images/full/7400/google-has-rebranded-its-apps-for-work-as-g-suite.png', style="max-width:150px;max-height:106px;")
+               .col-sm-1.col-md-offset-1.hidden-xs.hidden-sm
+         br
+         br
+
+
+
+   
+  .container-fluid
+    .left
+     .row
+      .col-md-1.col-sm-1.col-xs-1.box4
+         img(src='../images/icon_star.png', style='width:32px;height:32px;')
+      .col-md-2.col-sm-2.hidden-xs.box1
+
+        img(src='https://d3f1iyfxxz8i1e.cloudfront.net/courses/course_image/abac84dcb171.jpg', style="max-width:150px;max-height:106px;")
+      .col-md-6.col-sm-8.col-xs-10.box5
+        a(target='_blank', href='https://fr.coursera.org/learn/java-programming')
+          h3#roadmap-titre 	 Java Programming: Solving Problems with Software
+        p Learn to code in Java and improve your programming and problem-solving skills. You will learn to design algorithms as well as develop and debug programs.  
+      .col-sm-2.col-md-offset-1.hidden-xs.hidden-sm
+  br
+  br
+  
+  .container-fluid
+    .left
+     .row
+      .col-md-1.col-sm-1.col-xs-1.box4
+         img(src='../images/icon_star.png', style='width:32px;height:32px;')
+      .col-md-2.col-sm-2.hidden-xs.box1
+
+        img(src='https://upload.wikimedia.org/wikipedia/fr/thumb/2/2e/Java_Logo.svg/550px-Java_Logo.svg.png', style="max-width:150px;max-height:106px;")
+      .col-md-6.col-sm-8.col-xs-10.box5
+        a(target='_blank', href='https://fr.coursera.org/learn/java-programming-arrays-lists-data')
+          h3#roadmap-titre 	 Java Programming: Arrays, Lists, and Structured Data
+        p Build on the software engineering skills you learned in “Java Programming: Solving Problems with Software” by learning new data structures.
+      .col-sm-2.col-md-offset-1.hidden-xs.hidden-sm
+  br
+  br
+  if user.profile.development == "Yes"
+    .container-fluid
+        .left
+         .row
+          .col-md-1.col-sm-1.col-xs-1.box4
+             img(src='../images/icon_coffee.png', style='width:32px;height:32px;')
+          .col-sm-2.col-xs-4
+          .col-md-5.col-sm-8.col-xs-10.box5
+            a(target='_blank', href='https://www.edx.org/course/resume-networking-interview-skills-fullbridgex-career5x')
+              h3#roadmap-titre 	 Resume, Networking, and Interview Skills
+            p  Get the job you want with compelling resume writing and focused interview preparation.
+          .col-md-2.col-sm-2.hidden-xs.box1.hidden-sm
+                    img(src='http://gethiredfast.com/wp-content/uploads/2012/10/bigstock-Business-social-media-network-7907818.jpg', style="max-width:150px;max-height:106px;")
+          .col-sm-1.col-md-offset-1.hidden-xs.hidden-sm
+    br
+    br
+
+  .container-fluid
+    .left
+     .row
+      .col-md-1.col-sm-1.col-xs-1.box4
+         img(src='../images/icon_star.png', style='width:32px;height:32px;')
+      .col-md-2.col-sm-2.hidden-xs.box1
+
+        img(src="https://www.edx.org/sites/default/files/styles/course_video_banner/public/course/image/featured-card/softconst1-v4_318x210.jpg?itok=dycRoZS6" style="width:150px;height:106px;")
+      .col-md-6.col-sm-8.col-xs-10.box5
+        a(target='_blank', href="https://www.edx.org/course/software-construction-data-abstraction-ubcx-softconst1x")
+          h3#roadmap-titre 	 Software Construction: Data Abstraction
+        p Learn powerful data abstraction and decomposition techniques to build large, complex programs.
+
+  br
+  br
+  .container-fluid
+      .left
+       .row
+        .col-md-1.col-sm-1.col-xs-1.box4
+           img(src='../images/icon_star.png', style='width:32px;height:32px;')
+        .col-md-2.col-sm-2.hidden-xs.box1
+
+          img(src="https://webview.edx.org/sites/default/files/styles/course_video_banner/public/course/image/featured-card/softconst2-v4_318x210.jpg?itok=n3Wpi4Qr" style="width:150px;height:106px;")
+        .col-md-6.col-sm-8.col-xs-10.box5
+          a(target='_blank', href="https://www.edx.org/course/software-construction-object-oriented-ubcx-softconst2x")
+            h3#roadmap-titre 	 Software Construction: Object-Oriented Design
+          p Learn how to design large software systems that solve real-world problems using object-oriented design techniques.
+        .col-sm-2.col-md-offset-1.hidden-xs.hidden-sm
+
+  br
+  br
+    
+  .container
+   #centre
+     h4 Once you have finished your learning path, we will help you land your dream job.
+     p 
+      a.btn.btn-default(href='mailto:support@acuityformoms.com', role='button') Land your dream job »  
+
+  hr

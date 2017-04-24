@@ -9,23 +9,29 @@ block content
   form.form-horizontal(action='/account/profile', method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group
-       label.col-sm-3.control-label What field would you like to consider for your career?
-       .col-sm-9
-         label.radio.col-sm-3
-           input(type='radio', checked=user.profile.career=='web', name='career', value='web', data-toggle='radio')
-           span Web development
-         label.radio.col-sm-3
-           input(type='radio', checked=user.profile.career=='Design', name='career', value='Design', data-toggle='radio')
-           span Design
-         label.radio.col-sm-3
-            input(type='radio', checked=user.profile.career=='Marketing', name='career', value='Marketing', data-toggle='radio')
-            span Marketing
-         label.radio.col-sm-3
-            input(type='radio', checked=user.profile.career=='Finance', name='career', value='Finance', data-toggle='radio')
-            span Finance
-         label.radio.col-sm-3
-            input(type='radio', checked=user.profile.career=='Manager', name='career', value='Manager', data-toggle='radio')
-            span Project Manager
+         label.col-sm-3.control-label What field would you like to consider for your career?
+         .col-sm-9
+           label.radio.col-sm-3
+             input(type='radio', checked=user.profile.career=='web development', name='career', value='web development', data-toggle='radio')
+             span Web Development
+           label.radio.col-sm-3
+             input(type='radio', checked=user.profile.career=='software development', name='career', value='software development', data-toggle='radio')
+             span Software Development
+           label.radio.col-sm-3
+             input(type='radio', checked=user.profile.career=='web design', name='career', value='web design', data-toggle='radio')
+             span Web Design
+           label.radio.col-sm-3
+              input(type='radio', checked=user.profile.career=='digital marketing', name='career', value='digital marketing', data-toggle='radio')
+              span Digital Marketing
+           label.radio.col-sm-3
+              input(type='radio', checked=user.profile.career=='business foundation', name='career', value='business foundation', data-toggle='radio')
+              span Business Foundation
+           label.radio.col-sm-3
+              input(type='radio', checked=user.profile.career=='entrepreneurship', name='career', value='entrepreneurship', data-toggle='radio')
+              span Entrepreneurship
+           label.radio.col-sm-3
+              input(type='radio', checked=user.profile.career=='project management', name='career', value='project management', data-toggle='radio')
+              span Project Management
         
     
       

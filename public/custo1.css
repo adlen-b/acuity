@@ -2,6 +2,11 @@
 
 body {
   font-family: "Roboto";
+      padding-top: 110px;
+}
+
+h4, .h4 {
+    font-size: 22px;
 }
 
 .btn-default, .btn-default:focus {
@@ -18,7 +23,44 @@ a:hover, a:focus {
     color: #0099AD;
     text-decoration: underline; }
 
+ul.nav.navbar-nav {
+  margin-top: 10px;
+}
 /* Homepage */
+
+p.lead {
+  font-size: 30px;
+}
+
+.btn.btn-default{
+      height: 55px;
+      width: 320px;
+      font-size: 28px;
+      border-color: white;
+
+}
+
+.btn-default, .btn-default:focus {
+    background-image: linear-gradient(to bottom, #0099AD , #0099AD );
+}
+
+a.btn.btn-default{
+margin-top: 50px;
+}
+
+.navbar-brand{
+ margin-top: 0px;
+ padding-top: 0px;
+}
+
+div.navbar.navbar-default.navbar-fixed-top {
+  min-height: 100px;
+  margin-bottom: 0px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  font-size: 16px;
+}
 
 .container-fluid-wider{
   background-image : url('/images/homepage_mainphoto.png');
@@ -65,7 +107,24 @@ a:hover, a:focus {
 }
 
 #cache {
-  background-color: rgba(133, 133, 133, 0.75);
+  background-color: rgba(133, 133, 133, 0.4);
+  background-size: cover;
+   height: 450px;
+   width: 100%;
+  text-align: center;
+  color: white;
+  text-align: center;
+ padding: 0 0 0 0;
+  margin: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+    /* align horizontal */
+    align-items: center;
+    /* align vertical */
+}
+
+#cache1 {
+  background-color: rgba(133, 133, 133, 0.6);
   background-size: cover;
    height: 450px;
    width: 100%;
@@ -220,3 +279,11 @@ p.infotextmilieu {
       background-color: #F38630;
       border-radius: 5px;
   }
+
+h4.center {
+  text-align: center;
+}
+
+p.form {
+  font-size: 18px;
+}

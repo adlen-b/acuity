@@ -10,7 +10,6 @@
    res.redirect('/login');
  };
 
-
 exports.form = (req, res) => {
   res.render('pages/form', {
     title: 'form'

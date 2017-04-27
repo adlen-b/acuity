@@ -142,7 +142,8 @@ app.get('/pages/alison', alisonController.alison);
 
 
 app.get('/paths/path1', passportConfig.isAuthenticated, path1Controller.path1);
-
+app.get('/pages/form', passportConfig.isAuthenticated, formController.form);
+app.post('/pages/form', passportConfig.isAuthenticated, userController.postUpdateBackground);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);

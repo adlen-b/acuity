@@ -33,6 +33,13 @@ dotenv.load({ path: '.env.example' });
 const homeController = require('./controllers/home');
 const aboutController = require('./controllers/about');
 const designController = require('./controllers/design');
+const googleController = require('./controllers/google');
+const googlechallengeController = require('./controllers/googlechallenge');
+const alisonController = require('./controllers/alison');
+
+
+
+
 const hireController = require('./controllers/hire');
 const formController = require('./controllers/form');
 const path1Controller = require('./controllers/path1');
@@ -128,12 +135,12 @@ app.get('/', homeController.index);
 
 app.get('/pages/about', aboutController.about);
 app.get('/pages/design', designController.design);
-app.get('/pages/google', designController.design);
-app.get('/pages/googlechallenge', designController.design);
-app.get('/pages/alison', designController.design);
-app.get('/pages/hire', hireController.hire);
-app.get('/pages/form', passportConfig.isAuthenticated, formController.form);
-app.post('/pages/form', passportConfig.isAuthenticated, userController.postUpdateBackground);
+app.get('/pages/google', googleController.google);
+app.get('/pages/googlechallenge', googlechallengeController.googlechallenge);
+app.get('/pages/alison', alisonController.alison);
+
+
+
 app.get('/paths/path1', passportConfig.isAuthenticated, path1Controller.path1);
 
 app.get('/login', userController.getLogin);

@@ -9,7 +9,7 @@ block content
      .col-sm-8
       br
      
-      p.infotext 
+      p.infotextmilieu
        | In order for us to find the most appropriate ressources for your profile we need to understand your needs.
        | The first step is to determine the skills you already have by analysing your background. 
        | The last step is define your goals and interests.
@@ -22,7 +22,7 @@ block content
    .container(ng-app='')
     input(type='hidden', name='_csrf', value=_csrf)
 
-    .form-group
+    .form-group(ng-hide='showme')
       label.col-sm-3.control-label What is your highest education level?
       .col-sm-9.btn-group(data-toggle='buttons')
         label.btn.btn-info.col-sm-4
@@ -34,10 +34,10 @@ block content
         label.btn.btn-info.col-sm-4
           input(type='radio', checked=user.profile.highest_education=='Graduate degree', name='highest_education', value='Graduate degree', data-toggle='radio')
           span Graduate degree  
-    br
-    br  
+
+  
         
-    .form-group
+    .form-group(ng-hide='showme')
        label.col-sm-3.control-label What subject did you study?
        .col-sm-9.btn-group(data-toggle='buttons')
          label.btn.btn-info.col-sm-4
@@ -68,14 +68,8 @@ block content
             input(type='radio', checked=user.profile.subject=='Social', name='subject', value='Social', data-toggle='radio')
             span Social Sciences
     
-    br
-    br
-    br
-    br
-    br
-    br      
-        
-    .form-group
+          
+    .form-group(ng-hide='showme')
        label.col-sm-3.control-label How many years of experience do you have?
        .btn-group(data-toggle='buttons')
          label.btn.btn-info
@@ -92,7 +86,7 @@ block content
             span + 10 years
   
     
-    .form-group
+    .form-group(ng-hide='showme')
        label.col-sm-3.control-label When did you leave the workforce?
        .btn-group(data-toggle='buttons')
          label.btn.btn-info
@@ -105,16 +99,21 @@ block content
             input(type='radio', checked=user.profile.leave=='long', name='leave', value='long', data-toggle='radio')
             span +5 years
     br
-    br  
-    
+    br
     form
-      h4 Continue 
-      input(type='checkbox', ng-model='myVar')
+      h5 
+       a(href='', ng-click='showme=true') 
+        p(ng-hide='showme') Next 
+          i.fa.fa-arrow-circle-right
+       a(href='', ng-click='showme=false') 
+        p(ng-show='showme') Previous 
+          i.fa.fa-arrow-circle-left
+    
 
     
-    .page-header(ng-show='myVar') 
-    .form-group(ng-show='myVar')
-       label.col-sm-3.control-label What field would you like to consider for your career?
+    .page-header(ng-show='showme')
+    .form-group(ng-show='showme')
+       label.col-sm-3.control-label What field would you like to consider for your career? New fields to come!
        .col-sm-9.btn-group(data-toggle='buttons')
          label.btn.btn-info.col-sm-3
            input(type='radio', checked=user.profile.career=='web development', name='career', value='web development', data-toggle='radio')
@@ -137,33 +136,30 @@ block content
          label.btn.btn-info.col-sm-4
             input(type='radio', checked=user.profile.career=='project management', name='career', value='project management', data-toggle='radio')
             span Project Management
-    br
-    br
-    br
-    br
+  
         
     
       
       
-    .form-group(ng-show='myVar')
+    .form-group(ng-show='showme')
        label.col-sm-3.control-label What kind of job are you looking for?
        .btn-group(data-toggle='buttons')
          label.btn.btn-info
            input(type='radio', checked=user.profile.job=='Full', name='job', value='Full', data-toggle='radio')
-           span Full Time 
+           span Full-time 
          label.btn.btn-info
            input(type='radio', checked=user.profile.job=='Part', name='job', value='Part', data-toggle='radio')
-           span Part Time
+           span Part-time
          label.btn.btn-info
             input(type='radio', checked=user.profile.job=='Internship', name='job', value='Internship', data-toggle='radio')
             span Internship
          label.btn.btn-info
              input(type='radio', checked=user.profile.job=='Free', name='job', value='Free', data-toggle='radio')
-             span Free lance
+             span Freelance
       
     
-    .form-group(ng-show='myVar')
-       label.col-sm-3.control-label Do you need help in career development?
+    .form-group(ng-show='showme')
+       label.col-sm-3.control-label Do you need help in career development (resume, interviews etc)?
        .btn-group(data-toggle='buttons')
          label.btn.btn-info
            input(type='radio', checked=user.profile.development=='Yes', name='development', value='Yes', data-toggle='radio')
@@ -174,7 +170,7 @@ block content
          l
       
       
-    .form-group(ng-show='myVar')
+    .form-group(ng-show='showme')
          label.col-sm-3.control-label How many hours can you spend to learn every week?
          .btn-group(data-toggle='buttons')
            label.btn.btn-info
@@ -189,14 +185,13 @@ block content
            label.btn.btn-info
               input(type='radio', checked=user.profile.hours=='more', name='hours', value='more', data-toggle='radio')
               span 20+ hours
-    br
-              
+          
     
-    .form-group(ng-show='myVar')
+    .form-group(ng-show='showme')
       .col-sm-offset-3.col-sm-4
         button.btn.btn.btn-primary(type='submit')
-          i.fa.fa-pencil
-          | Update Background    
+          i.fa.fa-check-square
+          | Confirm background   
     
   
     

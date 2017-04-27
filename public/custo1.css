@@ -9,6 +9,10 @@ h4, .h4 {
     font-size: 22px;
 }
 
+h5, .h5 {
+    font-size: 18px;
+}
+
 .btn-default, .btn-default:focus {
   background-image: linear-gradient(to bottom, #0099AD , #0099AD ); }
 
@@ -30,6 +34,10 @@ ul.nav.navbar-nav {
 
 p.lead {
   font-size: 30px;
+}
+
+p.lead1 {
+  font-size: 24px;
 }
 
 .btn.btn-default{
@@ -59,7 +67,7 @@ div.navbar.navbar-default.navbar-fixed-top {
 }
 
 .navbar-default .navbar-nav > li > a {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .container-fluid-wider{
@@ -138,6 +146,15 @@ div.navbar.navbar-default.navbar-fixed-top {
     /* align horizontal */
     align-items: center;
     /* align vertical */
+}
+
+#cache2 {
+  background-color: rgba(133, 133, 133, 0.4);
+  background-size: cover;
+   height: 450px;
+   width: 100%;
+ padding: 0 0 0 0;
+  margin: 0 0 0 0;
 }
 
 .btn-default {
